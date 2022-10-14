@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -145,17 +145,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="brect.cpp" />
-    <ClCompile Include="btimer.cpp" />
-    <ClCompile Include="game.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Hitbox.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDLPlatformer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="brect.h" />
-    <ClInclude Include="btimer.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="header.h" />
-    <ClInclude Include="vector2.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="Hitbox.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,12 +17,12 @@ a safety pig has been provided below for your benefit
 		  /,_/      '`-'
 */
 
-#include "brect.h"
-#include "btimer.h"
-#include "game.h"
-#include "mainmenu.h"
+#include "Rect.h"
+#include "Timer.h"
+#include "Game.h"
+#include "MainMenu.h"
 
-#include "header.h"
+#include "Header.h"
 
 // Declare global objects
 SDL_Window* window;
@@ -39,7 +39,7 @@ map<SDL_Keycode, bool> keyDownMap;
 map<SDL_Keycode, bool> keyUpMap;
 
 // Declare camera
-BRect* camera;
+Rect* camera;
 float cameraXMin, cameraXMax, cameraYMin, cameraYMax;
 
 // Declare functions
@@ -62,18 +62,17 @@ int main(int argc, char* argv[])
 	renderer = SDL_CreateRenderer(window, -1, 0);
 
 	// Initialize global variables
-	//gameState = GameState::MAIN_MENU;
-	gameState = GameState::GAME;
+	gameState = GameState::MAIN_MENU;
 
 	// Initialize camera
-	camera = new BRect(0.0f, 0.0f, SCREEN_WIDTH, SCREEN_HEIGHT);
+	camera = new Rect(0.0f, 0.0f, SCREEN_WIDTH, SCREEN_HEIGHT);
 	cameraXMin = 0.0f;
 	cameraXMax = 1280.0f;
 	cameraYMin = -640.0f;
 	cameraYMax = 0.0f;
 
 	// Initialize timer
-	BTimer timer;
+	Timer timer;
 	float deltaTime = 0.0;
 	float timeElapsed = 0.0;
 
@@ -117,6 +116,7 @@ int main(int argc, char* argv[])
 		switch (gameState)
 		{
 		case GameState::MAIN_MENU:
+			game = new Game();
 			break;
 		case GameState::GAME:
 			break;

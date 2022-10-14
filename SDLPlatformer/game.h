@@ -1,16 +1,22 @@
 #pragma once
 
-#include "header.h"
+#include "Header.h"
+#include "Player.h"
 
 class Camera;
 
-class Game
+namespace Biff
 {
-public:
-	Game();
-	~Game();
+	class Game
+	{
+	public:
+		Game();
+		~Game();
 
-private:
-	Camera* camera;
-};
+	private:
+		Camera* camera;
+		Player* player;
+
+	};
+}
 

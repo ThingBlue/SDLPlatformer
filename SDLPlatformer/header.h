@@ -14,9 +14,10 @@
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
 
-#include "vector2.h"
+#include "Vector2.h"
 
 using namespace std;
+using namespace Biff;
 
 // Global enums
 enum class Axis
